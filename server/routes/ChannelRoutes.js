@@ -1,5 +1,5 @@
 import Router from "express"
-import { verifyToken } from "../middlewares/authMiddleware.js"
+import { verifyToken } from "../middlewares/AuthMiddleware.js"
 import { createChannel, getChannelMessages, getUserChannels } from "../controllers/ChannelController.js"
 
 const channelRoutes = Router()
