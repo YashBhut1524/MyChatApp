@@ -1,5 +1,5 @@
 import axios from "axios"
-import { HOST } from "@/utils/constans.js"
+// import { HOST } from "@/utils/constans.js"
 
 export const apiClient = axios.create({
     baseURL: "https://mychatapp-47h3.onrender.com",
