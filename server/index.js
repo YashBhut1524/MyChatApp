@@ -8,6 +8,8 @@ import contactsRoutes from "./routes/ContactRoutes.js"
 import setupSocket from "./socket.js";
 import messagesRoutes from "./routes/MessagesRoutes.js";
 import channelRoutes from "./routes/ChannelRoutes.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 

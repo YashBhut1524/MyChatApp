@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { genSalt, hash } from "bcrypt";
+import { genSalt, hash } from "bcryptjs";
 
 // Define a sub-schema for the colors object
 const colorsSchema = new mongoose.Schema({
