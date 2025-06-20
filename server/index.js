@@ -20,7 +20,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Serve static frontend
-app.use(express.static(path.join(__dirname, "../../client/dist")));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 const port = process.env.PORT || 5011;
 const databaseURL = process.env.DATABASE_URL;
@@ -43,7 +43,7 @@ app.use("/api/channel", channelRoutes)
 
 // All other routes → index.html
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../client/dist", "index.html"));
+    res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
 const server = app.listen(port, () => {
