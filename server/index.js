@@ -12,6 +12,14 @@ import channelRoutes from "./routes/ChannelRoutes.js";
 dotenv.config();
 
 const app = express();
+
+// Required for __dirname in ES Module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static frontend
+app.use(express.static(path.join(__dirname, "../../client/dist")));
+
 const port = process.env.PORT || 5011;
 const databaseURL = process.env.DATABASE_URL;
 
@@ -30,6 +38,11 @@ app.use("/api/auth", authRoutes)
 app.use("/api/contacts", contactsRoutes)
 app.use("/api/messages", messagesRoutes)
 app.use("/api/channel", channelRoutes)
+
+// All other routes → index.html
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../client/dist", "index.html"));
+});
 
 const server = app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
