@@ -131,7 +131,7 @@ function MessageContainer() {
     const renderDMMessages = (message) => {
         
         return ( // Add 'return' here
-            <div className={`h-[80vh] ${message.sender === selectedChatData._id ? "text-left" : "text-right"}`}>
+            <div className={`${message.sender === selectedChatData._id ? "text-left" : "text-right"}`}>
                 {message.messageType === "text" && (
                         <div
                             className={`inline-block p-3 rounded-2xl my-1 max-w-[50%] break-words text-md font-medium`}
