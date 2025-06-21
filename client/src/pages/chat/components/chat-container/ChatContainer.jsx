@@ -8,7 +8,7 @@ function ChatContainer() {
     // const {selectedChatType} = useAppStore()
 
     return (
-        <div className="fixed top-0 h-screen w-[100vw] bg-[#0b0518] flex flex-col md:static md:flex-1 ">
+        <div className="fixed top-0 h-full w-[100vw] bg-[#0b0518] flex flex-col md:static md:flex-1 ">
             <ChatHeader />
             {/* {
                 selectedChatType === 'contact' ? <MessageContainer /> : <MessageContainerForChannel />
